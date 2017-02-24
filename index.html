@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crystals Collector</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/game.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    </style>
+</head>
+
+<body background="assets/background.jpg">
+    <div id=titlediv>
+        <h1>Crystals Collector<h1>
+	</div>
+	<div id="directions">
+		<p> You will be given a random number at the start of the game</p>
+		<br>
+		<p>There are four crystals below. By clicking on a crystal you will add a specific amaount of points to your total score.</p>
+		<br>
+		<p>You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.</p>
+		<br>
+		<p>The value of each crystal is hidden from you until you click on it.</p>
+		<br>
+		<p>Each time when the game starts, the game will change the values of each crystals</p>
+
+
+	</div>
+	<div id=top>
+		<div id="firsttop"></div>
+		<div id="secondtop">Players Stats:
+    <p id ="wins">wins: </p>
+    
+    <p id="lose">losses: </p>  
+    </div>
+		
+	</div>
+	<div id=crystals>
+		<img src=assets/pic1.png class="pic" id="gem1">
+		<img src=assets/pic2.png class="pic" id="gem2">	
+		<img src=assets/pic3.png class="pic" id="gem3">		
+		<img src=assets/pic4.png class="pic" id="gem4">	
+	</div>
+	<div id="secondbottom">
+		<h2>Your total score is: <h2>
+	</div>
+	<div id="third">Total:
+
+		
+	</div>
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+		var scoreToGuess = Math.floor(Math.random() * 1000);
+    var wins = 0;
+    var losses = 0;
+    var total = 0;
+    var buttonValue1 = Math.floor(Math.random() * 100);
+    var buttonValue2 = Math.floor(Math.random() * 100);	
+  	var buttonValue3 = Math.floor(Math.random() * 100);
+  	var buttonValue4 = Math.floor(Math.random() * 100);
+  		
+
+
+ $('#gem1').on('click', function() {
+               total += buttonValue1; 
+                  if (total == scoreToGuess){
+                wins++;
+                $('#wins').html('wins: ' + wins);
+                alert("You Win!");
+                resetVars ();
+                
+              }else if (total > scoreToGuess){
+                losses++;
+                $('#lose').html('losses: ' + losses);
+                alert("You Lose!");
+                resetVars ();
+              }
+              $('#third').html('Total: ' +total);
+             });
+         
+        $('#gem2').on('click', function() {
+                total += buttonValue2; 
+                   if (total == scoreToGuess){
+                wins++;
+                $('#wins').html('wins: ' + wins);
+                alert("You Win!");
+                resetVars ();
+                
+              }else if (total > scoreToGuess){
+                losses++;
+                $('#lose').html('losses: ' + losses);
+                alert("You Lose!");
+                resetVars ();
+              }
+                
+
+                $('#third').html('Total: ' +total);
+                
+              });            
+          
+        $('#gem3').on('click', function() {
+                total += buttonValue3; 
+                   if (total == scoreToGuess){
+                wins++;
+                $('#wins').html('wins: ' + wins);
+                alert("You Win!");
+                resetVars ();
+                
+              }else if (total > scoreToGuess){
+                losses++;
+                $('#lose').html('losses: ' + losses);
+                alert("You Lose!");
+                resetVars ();
+              }
+                 
+              
+
+                $('#third').html('Total: ' +total);
+                
+               });         
+                 
+           $('#gem4').on('click', function() {
+                
+                 total += buttonValue4; 
+                  if (total == scoreToGuess){
+                wins++;
+                $('#wins').html('wins: ' + wins);
+                alert("You Win!");
+                resetVars ();
+                
+              }else if (total > scoreToGuess){
+                losses++;
+                $('#lose').html('losses: ' + losses);
+                alert("You Lose!");
+                resetVars ();
+                
+
+              }
+                
+
+                $('#third').html('Total: ' +total);
+                
+                
+                
+                         
+               
+
+               });
+
+          
+$('#firsttop').html('Score to guess: ' + scoreToGuess);
+
+
+function resetVars () {
+  buttonValue1 = Math.floor(Math.random() * 100);
+  buttonValue2 = Math.floor(Math.random() * 100); 
+  buttonValue3 = Math.floor(Math.random() * 100);
+  buttonValue4 = Math.floor(Math.random() * 100);
+  scoreToGuess = Math.floor(Math.random() * 1000);
+  total = 0;
+  $('#firsttop').html('Score to guess: ' + scoreToGuess);
+
+}
+
+
+
+
+
+});
+
+	</script>
+
+	
+</body>
+</html>

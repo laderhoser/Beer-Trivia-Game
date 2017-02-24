@@ -1,0 +1,57 @@
+
+#titlediv {
+	background-color: orange;
+	width: 25%;
+	height: 15%;
+	text-align: center;
+	padding-top: 10px;
+}
+#directions {
+	margin-top: 20px;
+	background-color: #C0C0C0;
+	width: 500px;
+	height: 500px;
+	padding-top: 20px;
+	
+	color: green;
+}
+#firsttop{
+	background-color: green;
+	height: 100px;
+	width: 200px;
+	float: left;
+	text-align: center;
+}
+#secondtop {
+	background-color: grey;
+	height: 100px;
+	width: 200px;
+	float: left;
+	margin-left: 10px;
+	text-align: center;
+
+}
+#top{
+	margin-top: 20px;
+}
+#crystals{
+clear: both;
+}
+
+#secondbottom{
+	background-color: grey;
+	width: 200px;
+	height: 50px;
+}
+#third{
+	background-color: grey;
+	width: 200px;
+	height: 100px;
+	margin-top: 10px;
+	font-size: 15px;
+	text-align: center;
+}
+.numLarge{
+	text-align: center;
+	color: green;
+}
